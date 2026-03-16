@@ -1,115 +1,64 @@
+aid: kubeflow-pipelines
 name: Kubeflow Pipelines
-description: 'Kubeflow Pipelines is a platform for building and deploying portable, scalable  machine learning (ML) workflows based on Docker containers. It provides a way  to orchestrate complex ML workflows with dependencies, enabling data scientists  and ML engineers to deploy production-ready ML systems.
-
-  '
-image: https://www.kubeflow.org/images/logo.svg
-url: https://www.kubeflow.org/docs/components/pipelines/
+description: >-
+  Kubeflow Pipelines is a platform for building and deploying portable,
+  scalable machine learning workflows based on Docker containers. It provides
+  a way to orchestrate complex ML workflows with dependencies, enabling data
+  scientists and ML engineers to deploy production-ready ML systems.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Machine Learning
-- MLOps
-- Kubernetes
-- Workflows
-- Pipelines
-- Data Science
-- Orchestration
-created: '2024'
-modified: '2024'
-apis:
-- name: Kubeflow Pipelines REST API
-  description: 'REST API for managing ML pipelines, experiments, runs, and artifacts.  Provides programmatic access to create, execute, and monitor ML workflows.
-
-    '
-  image: https://www.kubeflow.org/images/logo.svg
-  humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
-  baseURL: https://<your-kubeflow-host>/pipeline
-  tags:
-  - REST API
+  - Machine Learning
+  - MLOps
+  - Kubernetes
+  - Workflows
   - Pipelines
-  - Experiments
-  - Runs
-  properties:
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/kubeflow/pipelines/master/backend/api/v2beta1/swagger/pipeline_spec.swagger.json
-  - type: Documentation
-    url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
-  - type: Swagger UI
-    url: https://<your-kubeflow-host>/pipeline/apis/v2beta1/docs/
-- name: Kubeflow Pipelines Python SDK
-  description: 'Python SDK for building, compiling, and submitting ML pipelines. Provides  decorators and utilities to define pipeline components and workflows using Python.
-
-    '
-  image: https://www.kubeflow.org/images/logo.svg
-  humanURL: https://kubeflow-pipelines.readthedocs.io/
-  baseURL: https://pypi.org/project/kfp/
-  tags:
-  - Python
-  - SDK
-  - Client Library
-  - DSL
-  properties:
-  - type: Documentation
-    url: https://kubeflow-pipelines.readthedocs.io/
-  - type: GitHub Repository
-    url: https://github.com/kubeflow/pipelines/tree/master/sdk/python
-  - type: PyPI Package
-    url: https://pypi.org/project/kfp/
-  - type: Examples
-    url: https://github.com/kubeflow/pipelines/tree/master/samples
-- name: Kubeflow Pipelines Go Client
-  description: 'Go client library for interacting with Kubeflow Pipelines API programmatically  from Go applications.
-
-    '
-  image: https://www.kubeflow.org/images/logo.svg
-  humanURL: https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client
-  baseURL: https://github.com/kubeflow/pipelines
-  tags:
-  - Go
-  - Client Library
-  - SDK
-  properties:
-  - type: GitHub Repository
-    url: https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client
-  - type: Documentation
-    url: https://pkg.go.dev/github.com/kubeflow/pipelines/backend/api/go_client
-- name: Kubeflow Pipelines Metadata API
-  description: 'API for tracking and managing metadata about ML artifacts, executions, and  lineage information throughout the ML pipeline lifecycle.
-
-    '
-  image: https://www.kubeflow.org/images/logo.svg
-  humanURL: https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/
-  baseURL: https://<your-kubeflow-host>/pipeline
-  tags:
-  - Metadata
-  - Lineage
-  - Artifacts
-  - ML Metadata
-  properties:
-  - type: Documentation
-    url: https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/
-  - type: GitHub Repository
-    url: https://github.com/google/ml-metadata
+  - Data Science
+  - Orchestration
+url: https://raw.githubusercontent.com/api-evangelist/kubeflow-pipelines/refs/heads/main/apis.yml
+created: '2024-01-01'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: kubeflow-pipelines:rest-api
+    name: Kubeflow Pipelines REST API
+    description: >-
+      REST API for managing ML pipelines, experiments, runs, and artifacts.
+      Provides programmatic access to create, execute, and monitor ML workflows.
+    humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+    baseURL: https://your-kubeflow-host/pipeline
+    tags:
+      - REST API
+      - Pipelines
+      - Experiments
+    properties:
+      - type: Documentation
+        url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/kubeflow/pipelines/master/backend/api/v2beta1/swagger/pipeline_spec.swagger.json
+  - aid: kubeflow-pipelines:python-sdk
+    name: Kubeflow Pipelines Python SDK
+    description: >-
+      Python SDK for building, compiling, and submitting ML pipelines.
+    humanURL: https://kubeflow-pipelines.readthedocs.io/
+    baseURL: https://pypi.org/project/kfp/
+    tags:
+      - Python
+      - SDK
+    properties:
+      - type: Documentation
+        url: https://kubeflow-pipelines.readthedocs.io/
 common:
-- type: Getting Started
-  url: https://www.kubeflow.org/docs/components/pipelines/getting-started/
-- type: GitHub Organization
-  url: https://github.com/kubeflow/pipelines
-- type: Installation Guide
-  url: https://www.kubeflow.org/docs/components/pipelines/installation/
-- type: Tutorials
-  url: https://www.kubeflow.org/docs/components/pipelines/tutorials/
-- type: Community
-  url: https://www.kubeflow.org/docs/about/community/
-- type: Slack Channel
-  url: https://kubeflow.slack.com/
-- type: Release Notes
-  url: https://github.com/kubeflow/pipelines/releases
-- type: Roadmap
-  url: https://github.com/kubeflow/pipelines/blob/master/ROADMAP.md
-- type: Contributing Guide
-  url: https://github.com/kubeflow/pipelines/blob/master/CONTRIBUTING.md
-- type: Blog
-  url: https://blog.kubeflow.org/
+  - type: Website
+    url: https://www.kubeflow.org/docs/components/pipelines/
+  - type: Documentation
+    url: https://www.kubeflow.org/docs/components/pipelines/
+  - type: Getting Started
+    url: https://www.kubeflow.org/docs/components/pipelines/getting-started/
+  - type: GitHub Organization
+    url: https://github.com/kubeflow/pipelines
+  - type: Blog
+    url: https://blog.kubeflow.org/
 maintainers:
-- name: Kubeflow Community
-  email: kubeflow-discuss@googlegroups.com
-  url: https://www.kubeflow.org/
+  - FN: Kin Lane
+    email: kin@apievangelist.com
