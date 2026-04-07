@@ -8,13 +8,13 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
+  - Data Science
+  - Kubernetes
   - Machine Learning
   - MLOps
-  - Kubernetes
-  - Workflows
-  - Pipelines
-  - Data Science
   - Orchestration
+  - Pipelines
+  - Workflows
 url: https://raw.githubusercontent.com/api-evangelist/kubeflow-pipelines/refs/heads/main/apis.yml
 created: '2024-01-01'
 modified: '2026-03-16'
@@ -28,9 +28,9 @@ apis:
     humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
     baseURL: https://your-kubeflow-host/pipeline
     tags:
-      - REST API
-      - Pipelines
       - Experiments
+      - Pipelines
+      - REST API
     properties:
       - type: Documentation
         url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
