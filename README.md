@@ -1,102 +1,81 @@
 # Kubeflow Pipelines (kubeflow-pipelines)
-Kubeflow Pipelines is a platform for building and deploying portable, scalable  machine learning (ML) workflows based on Docker containers. It provides a way  to orchestrate complex ML workflows with dependencies, enabling data scientists  and ML engineers to deploy production-ready ML systems.
+Kubeflow Pipelines is a platform for building and deploying portable, scalable machine learning workflows based on Docker containers. It provides a way to orchestrate complex ML workflows with dependencies, enabling data scientists and ML engineers to deploy production-ready ML systems on Kubernetes.
 
+**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/kubeflow-pipelines/refs/heads/main/apis.yml)
 
-**URL:** [Visit APIs.json URL](https://www.kubeflow.org/docs/components/pipelines/)
+## Scope
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
 
 ## Tags:
-
- - Machine Learning, MLOps, Kubernetes, Workflows, Pipelines, Data Science, Orchestration
+ - Data Science, Kubernetes, Machine Learning, MLOps, Orchestration, Pipelines, Workflows
 
 ## Timestamps
-
-- **Created:** 2024 
-- **Modified:** 2024 
+- **Created:** 2024-01-01
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Kubeflow Pipelines REST API
-REST API for managing ML pipelines, experiments, runs, and artifacts.  Provides programmatic access to create, execute, and monitor ML workflows.
-
+REST API for managing ML pipelines, experiments, runs, and artifacts on a Kubeflow Pipelines deployment.
 
 **Human URL:** [https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/](https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/)
 
-
 #### Tags:
-
- - REST API, Pipelines, Experiments, Runs
+ - Experiments, Pipelines, REST API, Runs
 
 #### Properties
-
-- [OpenAPI](https://raw.githubusercontent.com/kubeflow/pipelines/master/backend/api/v2beta1/swagger/pipeline_spec.swagger.json)
 - [Documentation](https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/)
-- [Swagger UI](https://<your-kubeflow-host>/pipeline/apis/v2beta1/docs/)
+- [OpenAPI](https://raw.githubusercontent.com/kubeflow/pipelines/master/backend/api/v2beta1/swagger/pipeline.swagger.json)
 
 ### Kubeflow Pipelines Python SDK
-Python SDK for building, compiling, and submitting ML pipelines. Provides  decorators and utilities to define pipeline components and workflows using Python.
-
+Python SDK for building, compiling, and submitting ML pipelines using decorators and utilities to define components and workflows.
 
 **Human URL:** [https://kubeflow-pipelines.readthedocs.io/](https://kubeflow-pipelines.readthedocs.io/)
 
-
 #### Tags:
-
- - Python, SDK, Client Library, DSL
+ - Client Library, DSL, Python, SDK
 
 #### Properties
-
 - [Documentation](https://kubeflow-pipelines.readthedocs.io/)
-- [GitHub Repository](https://github.com/kubeflow/pipelines/tree/master/sdk/python)
-- [PyPI Package](https://pypi.org/project/kfp/)
+- [GitHubRepository](https://github.com/kubeflow/pipelines/tree/master/sdk/python)
 - [Examples](https://github.com/kubeflow/pipelines/tree/master/samples)
 
 ### Kubeflow Pipelines Go Client
-Go client library for interacting with Kubeflow Pipelines API programmatically  from Go applications.
-
+Go client library for interacting with the Kubeflow Pipelines API programmatically from Go applications.
 
 **Human URL:** [https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client](https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client)
 
-
 #### Tags:
-
- - Go, Client Library, SDK
+ - Client Library, Go, SDK
 
 #### Properties
-
-- [GitHub Repository](https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client)
 - [Documentation](https://pkg.go.dev/github.com/kubeflow/pipelines/backend/api/go_client)
+- [GitHubRepository](https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client)
 
 ### Kubeflow Pipelines Metadata API
-API for tracking and managing metadata about ML artifacts, executions, and  lineage information throughout the ML pipeline lifecycle.
-
+API for tracking metadata about ML artifacts, executions, and lineage information throughout the ML pipeline lifecycle, backed by ML Metadata (MLMD).
 
 **Human URL:** [https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/](https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/)
 
-
 #### Tags:
-
- - Metadata, Lineage, Artifacts, ML Metadata
+ - Artifacts, Lineage, Metadata, ML Metadata
 
 #### Properties
-
 - [Documentation](https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/)
-- [GitHub Repository](https://github.com/google/ml-metadata)
+- [GitHubRepository](https://github.com/google/ml-metadata)
 
 ## Common Properties
-
+- [Website](https://www.kubeflow.org/docs/components/pipelines/)
+- [Documentation](https://www.kubeflow.org/docs/components/pipelines/)
 - [Getting Started](https://www.kubeflow.org/docs/components/pipelines/getting-started/)
-- [GitHub Organization](https://github.com/kubeflow/pipelines)
-- [Installation Guide](https://www.kubeflow.org/docs/components/pipelines/installation/)
-- [Tutorials](https://www.kubeflow.org/docs/components/pipelines/tutorials/)
-- [Community](https://www.kubeflow.org/docs/about/community/)
-- [Slack Channel](https://kubeflow.slack.com/)
-- [Release Notes](https://github.com/kubeflow/pipelines/releases)
-- [Roadmap](https://github.com/kubeflow/pipelines/blob/master/ROADMAP.md)
-- [Contributing Guide](https://github.com/kubeflow/pipelines/blob/master/CONTRIBUTING.md)
+- [GitHub Organization](https://github.com/kubeflow)
+- [GitHub Repository](https://github.com/kubeflow/pipelines)
 - [Blog](https://blog.kubeflow.org/)
+- [Community](https://www.kubeflow.org/docs/about/community/)
+- [Change Log](https://github.com/kubeflow/pipelines/releases)
 
 ## Maintainers
-
-**FN:** Kubeflow Community
-
-**Email:** kubeflow-discuss@googlegroups.com
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
