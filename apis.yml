@@ -96,7 +96,7 @@ common:
     url: https://www.kubeflow.org/docs/components/pipelines/
   - type: Documentation
     url: https://www.kubeflow.org/docs/components/pipelines/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://www.kubeflow.org/docs/components/pipelines/getting-started/
   - type: GitHubOrg
     url: https://github.com/kubeflow
@@ -106,7 +106,7 @@ common:
     url: https://blog.kubeflow.org/
   - type: Community
     url: https://www.kubeflow.org/docs/about/community/
-  - type: Change Log
+  - type: ChangeLog
     url: https://github.com/kubeflow/pipelines/releases
 maintainers:
   - FN: Kin Lane
