@@ -7,7 +7,7 @@ description: >-
   scientists and ML engineers to deploy production-ready ML systems on
   Kubernetes.
 type: Index
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Data Science
   - Kubernetes
