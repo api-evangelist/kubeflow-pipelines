@@ -92,6 +92,10 @@ apis:
       - type: GitHubRepository
         url: https://github.com/google/ml-metadata
 common:
+  - type: DomainSecurity
+    url: security/kubeflow-pipelines-domain-security.yml
+  - type: Authentication
+    url: authentication/kubeflow-pipelines-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/kubeflow
   - type: Website

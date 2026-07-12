@@ -1,0 +1,14 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/kubeflow-pipelines-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: Bearer token issued by your Kubeflow distribution's identity provider. Some deployments
+    use a session cookie instead.
+  sources:
+  - openapi/kubeflow-pipelines-openapi.yml
