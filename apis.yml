@@ -92,6 +92,8 @@ apis:
       - type: GitHubRepository
         url: https://github.com/google/ml-metadata
 common:
+  - type: AgenticAccess
+    url: agentic-access/kubeflow-pipelines-agentic-access.yml
   - type: DomainSecurity
     url: security/kubeflow-pipelines-domain-security.yml
   - type: Authentication
