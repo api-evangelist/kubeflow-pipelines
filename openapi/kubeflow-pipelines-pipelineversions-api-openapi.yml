@@ -1,0 +1,109 @@
+openapi: 3.1.0
+info:
+  title: Kubeflow Pipelines REST Experiments PipelineVersions API
+  description: REST API for the Kubeflow Pipelines platform (v2beta1). Provides programmatic access to manage experiments, pipelines, pipeline versions, runs, and recurring jobs on a Kubeflow Pipelines deployment. Authentication is handled by the Kubeflow distribution and is typically a bearer token or session cookie passed in request headers.
+  version: 2beta1
+  contact:
+    name: Kubeflow Pipelines
+    url: https://www.kubeflow.org/docs/components/pipelines/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://{host}/pipeline
+  description: Kubeflow Pipelines deployment (replace {host} with your cluster hostname)
+  variables:
+    host:
+      default: kubeflow.example.com
+      description: Hostname of the Kubeflow deployment
+security:
+- bearerAuth: []
+tags:
+- name: PipelineVersions
+  description: Manage versions of pipelines
+paths:
+  /apis/v2beta1/pipelines/{pipeline_id}/versions:
+    get:
+      tags:
+      - PipelineVersions
+      operationId: listPipelineVersions
+      summary: List versions of a pipeline
+      parameters:
+      - in: path
+        name: pipeline_id
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+      - in: query
+        name: page_token
+        schema:
+          type: string
+      responses:
+        '200':
+          description: List of pipeline versions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListPipelineVersionsResponse'
+    post:
+      tags:
+      - PipelineVersions
+      operationId: createPipelineVersion
+      summary: Create a pipeline version
+      parameters:
+      - in: path
+        name: pipeline_id
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PipelineVersion'
+      responses:
+        '200':
+          description: Version created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PipelineVersion'
+components:
+  schemas:
+    PipelineVersion:
+      type: object
+      properties:
+        pipeline_id:
+          type: string
+        pipeline_version_id:
+          type: string
+          readOnly: true
+        display_name:
+          type: string
+        description:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+    ListPipelineVersionsResponse:
+      type: object
+      properties:
+        pipeline_versions:
+          type: array
+          items:
+            $ref: '#/components/schemas/PipelineVersion'
+        total_size:
+          type: integer
+        next_page_token:
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Bearer token issued by your Kubeflow distribution's identity provider. Some deployments use a session cookie instead.

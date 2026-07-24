@@ -1,0 +1,173 @@
+openapi: 3.1.0
+info:
+  title: Kubeflow REST Experiments Pipelines API
+  description: REST API for the Kubeflow Pipelines platform (v2beta1). Provides programmatic access to manage experiments, pipelines, pipeline versions, runs, and recurring jobs on a Kubeflow Pipelines deployment. Authentication is handled by the Kubeflow distribution and is typically a bearer token or session cookie passed in request headers.
+  version: 2beta1
+  contact:
+    name: Kubeflow Pipelines
+    url: https://www.kubeflow.org/docs/components/pipelines/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://{host}/pipeline
+  description: Kubeflow Pipelines deployment (replace {host} with your cluster hostname)
+  variables:
+    host:
+      default: kubeflow.example.com
+      description: Hostname of the Kubeflow deployment
+security:
+- bearerAuth: []
+tags:
+- name: Pipelines
+  description: Manage pipeline definitions
+paths:
+  /apis/v2beta1/pipelines:
+    get:
+      tags:
+      - Pipelines
+      operationId: listPipelines
+      summary: List pipelines
+      parameters:
+      - in: query
+        name: namespace
+        schema:
+          type: string
+      - in: query
+        name: page_size
+        schema:
+          type: integer
+      - in: query
+        name: page_token
+        schema:
+          type: string
+      responses:
+        '200':
+          description: List of pipelines
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListPipelinesResponse'
+    post:
+      tags:
+      - Pipelines
+      operationId: createPipeline
+      summary: Create a pipeline
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pipeline'
+      responses:
+        '200':
+          description: Pipeline created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pipeline'
+  /apis/v2beta1/pipelines/{pipeline_id}:
+    get:
+      tags:
+      - Pipelines
+      operationId: getPipeline
+      summary: Get pipeline by ID
+      parameters:
+      - in: path
+        name: pipeline_id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Pipeline
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pipeline'
+    delete:
+      tags:
+      - Pipelines
+      operationId: deletePipeline
+      summary: Delete pipeline
+      parameters:
+      - in: path
+        name: pipeline_id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Deleted
+  /apis/v2beta1/pipelines/upload:
+    post:
+      tags:
+      - Pipelines
+      operationId: uploadPipeline
+      summary: Upload a pipeline package
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+      - in: query
+        name: description
+        schema:
+          type: string
+      - in: query
+        name: namespace
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                uploadfile:
+                  type: string
+                  format: binary
+              required:
+              - uploadfile
+      responses:
+        '200':
+          description: Pipeline uploaded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pipeline'
+components:
+  schemas:
+    Pipeline:
+      type: object
+      properties:
+        pipeline_id:
+          type: string
+          readOnly: true
+        display_name:
+          type: string
+        description:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        namespace:
+          type: string
+    ListPipelinesResponse:
+      type: object
+      properties:
+        pipelines:
+          type: array
+          items:
+            $ref: '#/components/schemas/Pipeline'
+        total_size:
+          type: integer
+        next_page_token:
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Bearer token issued by your Kubeflow distribution's identity provider. Some deployments use a session cookie instead.

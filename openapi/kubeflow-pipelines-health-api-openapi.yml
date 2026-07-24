@@ -1,0 +1,39 @@
+openapi: 3.1.0
+info:
+  title: Kubeflow Pipelines REST Experiments Health API
+  description: REST API for the Kubeflow Pipelines platform (v2beta1). Provides programmatic access to manage experiments, pipelines, pipeline versions, runs, and recurring jobs on a Kubeflow Pipelines deployment. Authentication is handled by the Kubeflow distribution and is typically a bearer token or session cookie passed in request headers.
+  version: 2beta1
+  contact:
+    name: Kubeflow Pipelines
+    url: https://www.kubeflow.org/docs/components/pipelines/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://{host}/pipeline
+  description: Kubeflow Pipelines deployment (replace {host} with your cluster hostname)
+  variables:
+    host:
+      default: kubeflow.example.com
+      description: Hostname of the Kubeflow deployment
+security:
+- bearerAuth: []
+tags:
+- name: Health
+  description: Health and auth checks
+paths:
+  /apis/v2beta1/healthz:
+    get:
+      tags:
+      - Health
+      operationId: getHealthz
+      summary: API server health check
+      responses:
+        '200':
+          description: Service healthy
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Bearer token issued by your Kubeflow distribution's identity provider. Some deployments use a session cookie instead.
