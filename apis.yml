@@ -7,7 +7,20 @@ description: >-
   scientists and ML engineers to deploy production-ready ML systems on
   Kubernetes.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kubeflow-pipelines.png
 tags:
   - Data Science
   - Kubernetes
@@ -21,76 +34,125 @@ created: '2024-01-01'
 modified: '2026-04-28'
 specificationVersion: '0.19'
 apis:
-  - aid: kubeflow-pipelines:rest-api
-    name: Kubeflow Pipelines REST API
-    description: >-
-      REST API for managing ML pipelines, experiments, runs, and artifacts.
-      Provides programmatic access to create, execute, and monitor ML workflows
-      on a Kubeflow Pipelines deployment.
-    humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
-    baseURL: https://your-kubeflow-host/pipeline
-    tags:
-      - Experiments
-      - Pipelines
-      - REST API
-      - Runs
-    properties:
-      - type: Documentation
-        url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/kubeflow/pipelines/master/backend/api/v2beta1/swagger/pipeline.swagger.json
-  - aid: kubeflow-pipelines:python-sdk
-    name: Kubeflow Pipelines Python SDK
-    description: >-
-      Python SDK for building, compiling, and submitting ML pipelines. Provides
-      decorators and utilities to define pipeline components and workflows
-      using Python.
-    humanURL: https://kubeflow-pipelines.readthedocs.io/
-    baseURL: https://pypi.org/project/kfp/
-    tags:
-      - Client Library
-      - DSL
-      - Python
-      - SDK
-    properties:
-      - type: Documentation
-        url: https://kubeflow-pipelines.readthedocs.io/
-      - type: GitHubRepository
-        url: https://github.com/kubeflow/pipelines/tree/master/sdk/python
-      - type: Examples
-        url: https://github.com/kubeflow/pipelines/tree/master/samples
-  - aid: kubeflow-pipelines:go-client
-    name: Kubeflow Pipelines Go Client
-    description: >-
-      Go client library for interacting with the Kubeflow Pipelines API
-      programmatically from Go applications.
-    humanURL: https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client
-    tags:
-      - Client Library
-      - Go
-      - SDK
-    properties:
-      - type: Documentation
-        url: https://pkg.go.dev/github.com/kubeflow/pipelines/backend/api/go_client
-      - type: GitHubRepository
-        url: https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client
-  - aid: kubeflow-pipelines:metadata-api
-    name: Kubeflow Pipelines Metadata API
-    description: >-
-      API for tracking and managing metadata about ML artifacts, executions,
-      and lineage information throughout the ML pipeline lifecycle, backed by
-      ML Metadata (MLMD).
-    humanURL: https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/
-    tags:
-      - Artifacts
-      - Lineage
-      - Metadata
-      - ML Metadata
-    properties:
-      - type: Documentation
-        url: https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/
-      - type: GitHubRepository
-        url: https://github.com/google/ml-metadata
+- aid: kubeflow-pipelines:python-sdk
+  name: Kubeflow Pipelines Python SDK
+  description: >-
+    Python SDK for building, compiling, and submitting ML pipelines. Provides decorators and utilities
+    to define pipeline components and workflows using Python.
+  humanURL: https://kubeflow-pipelines.readthedocs.io/
+  baseURL: https://pypi.org/project/kfp/
+  tags:
+  - Client Library
+  - DSL
+  - Python
+  - SDK
+  properties:
+  - type: Documentation
+    url: https://kubeflow-pipelines.readthedocs.io/
+  - type: GitHubRepository
+    url: https://github.com/kubeflow/pipelines/tree/master/sdk/python
+  - type: Examples
+    url: https://github.com/kubeflow/pipelines/tree/master/samples
+- aid: kubeflow-pipelines:go-client
+  name: Kubeflow Pipelines Go Client
+  description: >-
+    Go client library for interacting with the Kubeflow Pipelines API programmatically from Go applications.
+  humanURL: https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client
+  tags:
+  - Client Library
+  - Go
+  - SDK
+  properties:
+  - type: Documentation
+    url: https://pkg.go.dev/github.com/kubeflow/pipelines/backend/api/go_client
+  - type: GitHubRepository
+    url: https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client
+- aid: kubeflow-pipelines:metadata-api
+  name: Kubeflow Pipelines Metadata API
+  description: >-
+    API for tracking and managing metadata about ML artifacts, executions, and lineage information throughout
+    the ML pipeline lifecycle, backed by ML Metadata (MLMD).
+  humanURL: https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/
+  tags:
+  - Artifacts
+  - Lineage
+  - Metadata
+  - ML Metadata
+  properties:
+  - type: Documentation
+    url: https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/
+  - type: GitHubRepository
+    url: https://github.com/google/ml-metadata
+- aid: kubeflow-pipelines:kubeflow-pipelines-experiments-api
+  name: Kubeflow Pipelines Experiments API
+  description: Group runs and recurring jobs into experiments
+  humanURL: >-
+    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  baseURL: https://your-kubeflow-host/pipeline
+  tags:
+  - Experiments
+  properties:
+  - type: OpenAPI
+    url: openapi/kubeflow-pipelines-experiments-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+- aid: kubeflow-pipelines:kubeflow-pipelines-health-api
+  name: Kubeflow Pipelines Health API
+  description: Health and auth checks
+  humanURL: >-
+    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  baseURL: https://your-kubeflow-host/pipeline
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/kubeflow-pipelines-health-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+- aid: kubeflow-pipelines:kubeflow-pipelines-pipelines-api
+  name: Kubeflow Pipelines Pipelines API
+  description: Manage pipeline definitions
+  humanURL: >-
+    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  baseURL: https://your-kubeflow-host/pipeline
+  tags:
+  - Pipelines
+  properties:
+  - type: OpenAPI
+    url: openapi/kubeflow-pipelines-pipelines-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+- aid: kubeflow-pipelines:kubeflow-pipelines-pipelineversions-api
+  name: Kubeflow Pipelines PipelineVersions API
+  description: Manage versions of pipelines
+  humanURL: >-
+    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  baseURL: https://your-kubeflow-host/pipeline
+  tags:
+  - PipelineVersions
+  properties:
+  - type: OpenAPI
+    url: openapi/kubeflow-pipelines-pipelineversions-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+- aid: kubeflow-pipelines:kubeflow-pipelines-runs-api
+  name: Kubeflow Pipelines Runs API
+  description: Pipeline runs
+  humanURL: >-
+    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  baseURL: https://your-kubeflow-host/pipeline
+  tags:
+  - Runs
+  properties:
+  - type: OpenAPI
+    url: openapi/kubeflow-pipelines-runs-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
 common:
   - type: AgenticAccess
     url: agentic-access/kubeflow-pipelines-agentic-access.yml
