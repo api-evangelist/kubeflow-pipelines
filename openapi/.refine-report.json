@@ -1,0 +1,22 @@
+{
+  "provider": "kubeflow-pipelines",
+  "sources": [
+    "kubeflow-pipelines-experiments-api-openapi.yml",
+    "kubeflow-pipelines-health-api-openapi.yml",
+    "kubeflow-pipelines-pipelines-api-openapi.yml",
+    "kubeflow-pipelines-pipelineversions-api-openapi.yml",
+    "kubeflow-pipelines-runs-api-openapi.yml"
+  ],
+  "outputs": [
+    "kubeflow-pipelines-experiments-api-openapi.yml",
+    "kubeflow-pipelines-health-api-openapi.yml",
+    "kubeflow-pipelines-pipelines-api-openapi.yml",
+    "kubeflow-pipelines-pipelineversions-api-openapi.yml",
+    "kubeflow-pipelines-runs-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
