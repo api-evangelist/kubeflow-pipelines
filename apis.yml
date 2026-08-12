@@ -154,6 +154,17 @@ apis:
     url: >-
       https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
 common:
+  - type: IssueTracker
+    url: https://github.com/kubeflow/pipelines/issues
+  - type: SecurityPolicy
+    url: https://github.com/kubeflow/pipelines/blob/master/SECURITY.md
+  - type: CodeOfConduct
+    url: https://github.com/kubeflow/pipelines/blob/master/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/kubeflow/pipelines/blob/master/CONTRIBUTING.md
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/kubeflow/pipelines/blob/master/LICENSE
   - type: AgenticAccess
     url: agentic-access/kubeflow-pipelines-agentic-access.yml
   - type: DomainSecurity
