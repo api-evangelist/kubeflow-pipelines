@@ -32,7 +32,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/kubeflow-pipelines/refs/heads/main/apis.yml
 created: '2024-01-01'
 modified: '2026-04-28'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: kubeflow-pipelines:python-sdk
   name: Kubeflow Pipelines Python SDK
