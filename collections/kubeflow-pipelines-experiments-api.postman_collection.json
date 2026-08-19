@@ -1,0 +1,512 @@
+{
+  "item": [
+    {
+      "id": "a6e1b9cc-e74f-4faf-9276-63630133a1ee",
+      "name": "Experiments",
+      "description": {
+        "content": "Group runs and recurring jobs into experiments",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "87bf4873-91b8-4f50-badc-61b4ee34ae28",
+          "name": "List experiments",
+          "request": {
+            "name": "List experiments",
+            "description": {},
+            "url": {
+              "path": [
+                "apis",
+                "v2beta1",
+                "experiments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "namespace",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_token",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort_by",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Hostname of the Kubeflow deployment",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "71600589-15d7-4ea2-b24b-1abd45c5429c",
+              "name": "List of experiments",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apis",
+                    "v2beta1",
+                    "experiments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "namespace",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page_token",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sort_by",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Hostname of the Kubeflow deployment",
+                      "type": "any",
+                      "value": "{{host}}",
+                      "key": "host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"experiments\": [\n    {\n      \"experiment_id\": \"string\",\n      \"display_name\": \"string\",\n      \"description\": \"string\",\n      \"created_at\": \"1995-03-26T01:45:04.260Z\",\n      \"namespace\": \"string\",\n      \"storage_state\": \"AVAILABLE\"\n    },\n    {\n      \"experiment_id\": \"string\",\n      \"display_name\": \"string\",\n      \"description\": \"string\",\n      \"created_at\": \"1953-10-30T12:57:58.628Z\",\n      \"namespace\": \"string\",\n      \"storage_state\": \"ARCHIVED\"\n    }\n  ],\n  \"total_size\": 4750,\n  \"next_page_token\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fc05a092-5165-4fcc-b519-79ae9687f18a",
+          "name": "Create a new experiment",
+          "request": {
+            "name": "Create a new experiment",
+            "description": {},
+            "url": {
+              "path": [
+                "apis",
+                "v2beta1",
+                "experiments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Hostname of the Kubeflow deployment",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"display_name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"namespace\": \"<string>\",\n  \"storage_state\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "892c4021-14ca-41f6-8426-0d22af8df857",
+              "name": "Experiment created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apis",
+                    "v2beta1",
+                    "experiments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Hostname of the Kubeflow deployment",
+                      "type": "any",
+                      "value": "{{host}}",
+                      "key": "host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"display_name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"namespace\": \"<string>\",\n  \"storage_state\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"experiment_id\": \"string\",\n  \"display_name\": \"string\",\n  \"description\": \"string\",\n  \"created_at\": \"1969-11-11T16:18:56.605Z\",\n  \"namespace\": \"string\",\n  \"storage_state\": \"ARCHIVED\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c3afb598-6ea2-42db-a5ae-4343409942a0",
+          "name": "Get experiment by ID",
+          "request": {
+            "name": "Get experiment by ID",
+            "description": {},
+            "url": {
+              "path": [
+                "apis",
+                "v2beta1",
+                "experiments",
+                ":experiment_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "experiment_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Hostname of the Kubeflow deployment",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7a228374-c92f-49ae-b852-d254ce33263f",
+              "name": "Experiment",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apis",
+                    "v2beta1",
+                    "experiments",
+                    ":experiment_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "experiment_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Hostname of the Kubeflow deployment",
+                      "type": "any",
+                      "value": "{{host}}",
+                      "key": "host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"experiment_id\": \"string\",\n  \"display_name\": \"string\",\n  \"description\": \"string\",\n  \"created_at\": \"1969-11-11T16:18:56.605Z\",\n  \"namespace\": \"string\",\n  \"storage_state\": \"ARCHIVED\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dc67fa59-4681-439c-832d-ffc8a6bf40d6",
+          "name": "Delete experiment",
+          "request": {
+            "name": "Delete experiment",
+            "description": {},
+            "url": {
+              "path": [
+                "apis",
+                "v2beta1",
+                "experiments",
+                ":experiment_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "experiment_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Hostname of the Kubeflow deployment",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d30e1693-3cea-4e63-9758-034c1889f9d8",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apis",
+                    "v2beta1",
+                    "experiments",
+                    ":experiment_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "experiment_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Hostname of the Kubeflow deployment",
+                      "type": "any",
+                      "value": "{{host}}",
+                      "key": "host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Hostname of the Kubeflow deployment",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "kubeflow.example.com",
+      "key": "host"
+    },
+    {
+      "type": "string",
+      "value": "https://{{host}}/pipeline",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "27581d50-d176-47af-90f4-513f01e813d0",
+    "name": "Kubeflow Pipelines REST Experiments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Kubeflow Pipelines platform (v2beta1). Provides programmatic access to manage experiments, pipelines, pipeline versions, runs, and recurring jobs on a Kubeflow Pipelines deployment. Authentication is handled by the Kubeflow distribution and is typically a bearer token or session cookie passed in request headers.\n\nContact Support:\n Name: Kubeflow Pipelines",
+      "type": "text/plain"
+    }
+  }
+}

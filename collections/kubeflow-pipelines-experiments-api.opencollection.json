@@ -1,0 +1,113 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Kubeflow Pipelines REST Experiments API",
+    "version": "2beta1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Experiments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List experiments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{host}/pipeline/apis/v2beta1/experiments",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_token",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort_by",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filter",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List experiments"
+        },
+        {
+          "info": {
+            "name": "Create a new experiment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{host}/pipeline/apis/v2beta1/experiments",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new experiment"
+        },
+        {
+          "info": {
+            "name": "Get experiment by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{host}/pipeline/apis/v2beta1/experiments/:experiment_id",
+            "params": [
+              {
+                "name": "experiment_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get experiment by ID"
+        },
+        {
+          "info": {
+            "name": "Delete experiment",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{host}/pipeline/apis/v2beta1/experiments/:experiment_id",
+            "params": [
+              {
+                "name": "experiment_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete experiment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

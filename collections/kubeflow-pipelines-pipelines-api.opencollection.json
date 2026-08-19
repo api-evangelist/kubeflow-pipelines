@@ -1,0 +1,141 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Kubeflow REST Experiments Pipelines API",
+    "version": "2beta1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Pipelines",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List pipelines",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{host}/pipeline/apis/v2beta1/pipelines",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_token",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List pipelines"
+        },
+        {
+          "info": {
+            "name": "Create a pipeline",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{host}/pipeline/apis/v2beta1/pipelines",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a pipeline"
+        },
+        {
+          "info": {
+            "name": "Get pipeline by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{host}/pipeline/apis/v2beta1/pipelines/:pipeline_id",
+            "params": [
+              {
+                "name": "pipeline_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get pipeline by ID"
+        },
+        {
+          "info": {
+            "name": "Delete pipeline",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{host}/pipeline/apis/v2beta1/pipelines/:pipeline_id",
+            "params": [
+              {
+                "name": "pipeline_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete pipeline"
+        },
+        {
+          "info": {
+            "name": "Upload a pipeline package",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{host}/pipeline/apis/v2beta1/pipelines/upload",
+            "params": [
+              {
+                "name": "name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "description",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "uploadfile",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Upload a pipeline package"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,189 @@
+{
+  "item": [
+    {
+      "id": "36a0abba-a742-4e7e-98ac-3f3e768e465b",
+      "name": "Runs",
+      "description": {
+        "content": "Pipeline runs",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2dd93eaf-3911-453a-a5f7-49ab003d51e3",
+          "name": "List pipeline runs",
+          "request": {
+            "name": "List pipeline runs",
+            "description": {},
+            "url": {
+              "path": [
+                "apis",
+                "v2beta1",
+                "runs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "namespace",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "experiment_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_token",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort_by",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Hostname of the Kubeflow deployment",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f3dbda17-be67-4119-8072-a45bfa06a23c",
+              "name": "List of runs",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apis",
+                    "v2beta1",
+                    "runs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "namespace",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "experiment_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page_token",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sort_by",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Hostname of the Kubeflow deployment",
+                      "type": "any",
+                      "value": "{{host}}",
+                      "key": "host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Hostname of the Kubeflow deployment",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "kubeflow.example.com",
+      "key": "host"
+    },
+    {
+      "type": "string",
+      "value": "https://{{host}}/pipeline",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "56575ef9-3478-4aa0-b7d3-c4a1afb4716f",
+    "name": "Kubeflow Pipelines REST Experiments Runs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Kubeflow Pipelines platform (v2beta1). Provides programmatic access to manage experiments, pipelines, pipeline versions, runs, and recurring jobs on a Kubeflow Pipelines deployment. Authentication is handled by the Kubeflow distribution and is typically a bearer token or session cookie passed in request headers.\n\nContact Support:\n Name: Kubeflow Pipelines",
+      "type": "text/plain"
+    }
+  }
+}

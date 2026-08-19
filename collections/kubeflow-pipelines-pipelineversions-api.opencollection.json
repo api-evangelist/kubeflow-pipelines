@@ -1,0 +1,74 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Kubeflow Pipelines REST Experiments PipelineVersions API",
+    "version": "2beta1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "PipelineVersions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List versions of a pipeline",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{host}/pipeline/apis/v2beta1/pipelines/:pipeline_id/versions",
+            "params": [
+              {
+                "name": "pipeline_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_token",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List versions of a pipeline"
+        },
+        {
+          "info": {
+            "name": "Create a pipeline version",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{host}/pipeline/apis/v2beta1/pipelines/:pipeline_id/versions",
+            "params": [
+              {
+                "name": "pipeline_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a pipeline version"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

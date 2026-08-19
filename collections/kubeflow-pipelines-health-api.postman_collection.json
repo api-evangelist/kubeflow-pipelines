@@ -1,0 +1,133 @@
+{
+  "item": [
+    {
+      "id": "2e16850d-86c6-404a-86d5-edaa1b4b1b04",
+      "name": "Health",
+      "description": {
+        "content": "Health and auth checks",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "68e1f94a-a6f2-4609-8e5b-7b24260ce6ab",
+          "name": "API server health check",
+          "request": {
+            "name": "API server health check",
+            "description": {},
+            "url": {
+              "path": [
+                "apis",
+                "v2beta1",
+                "healthz"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Hostname of the Kubeflow deployment",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5ddb2ef6-cbf3-4422-8be5-bfa2c1de14ca",
+              "name": "Service healthy",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apis",
+                    "v2beta1",
+                    "healthz"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Hostname of the Kubeflow deployment",
+                      "type": "any",
+                      "value": "{{host}}",
+                      "key": "host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Hostname of the Kubeflow deployment",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "kubeflow.example.com",
+      "key": "host"
+    },
+    {
+      "type": "string",
+      "value": "https://{{host}}/pipeline",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5047a1e5-90bd-4b5f-a0c7-ea6833940f5f",
+    "name": "Kubeflow Pipelines REST Experiments Health API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Kubeflow Pipelines platform (v2beta1). Provides programmatic access to manage experiments, pipelines, pipeline versions, runs, and recurring jobs on a Kubeflow Pipelines deployment. Authentication is handled by the Kubeflow distribution and is typically a bearer token or session cookie passed in request headers.\n\nContact Support:\n Name: Kubeflow Pipelines",
+      "type": "text/plain"
+    }
+  }
+}
