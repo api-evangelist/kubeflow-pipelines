@@ -214,3 +214,5 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-parent: kubeflow
+x-relationship: product

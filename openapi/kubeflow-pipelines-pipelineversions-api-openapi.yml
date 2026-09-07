@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Kubeflow Pipelines REST Experiments PipelineVersions API
+  title: Kubeflow Pipelines REST Experiments Pipeline Versions API
   description: REST API for the Kubeflow Pipelines platform (v2beta1). Provides programmatic access to manage experiments, pipelines, pipeline versions, runs, and recurring jobs on a Kubeflow Pipelines deployment. Authentication is handled by the Kubeflow distribution and is typically a bearer token or session cookie passed in request headers.
   version: 2beta1
   contact:
@@ -75,6 +75,17 @@ paths:
                 $ref: '#/components/schemas/PipelineVersion'
 components:
   schemas:
+    ListPipelineVersionsResponse:
+      type: object
+      properties:
+        pipeline_versions:
+          type: array
+          items:
+            $ref: '#/components/schemas/PipelineVersion'
+        total_size:
+          type: integer
+        next_page_token:
+          type: string
     PipelineVersion:
       type: object
       properties:
@@ -91,17 +102,6 @@ components:
           type: string
           format: date-time
           readOnly: true
-    ListPipelineVersionsResponse:
-      type: object
-      properties:
-        pipeline_versions:
-          type: array
-          items:
-            $ref: '#/components/schemas/PipelineVersion'
-        total_size:
-          type: integer
-        next_page_token:
-          type: string
   securitySchemes:
     bearerAuth:
       type: http
