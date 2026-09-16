@@ -1,11 +1,8 @@
 aid: kubeflow-pipelines
 name: Kubeflow Pipelines
-description: >-
-  Kubeflow Pipelines is a platform for building and deploying portable,
-  scalable machine learning workflows based on Docker containers. It provides
-  a way to orchestrate complex ML workflows with dependencies, enabling data
-  scientists and ML engineers to deploy production-ready ML systems on
-  Kubernetes.
+description: Kubeflow Pipelines is a platform for building and deploying portable, scalable machine learning
+  workflows based on Docker containers. It provides a way to orchestrate complex ML workflows with dependencies,
+  enabling data scientists and ML engineers to deploy production-ready ML systems on Kubernetes.
 type: Index
 deliveryModel:
   model: self-hosted
@@ -36,31 +33,30 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kubeflow-pipelines.png
 tags:
-  - Data Science
-  - Kubernetes
-  - Machine-Learning
-  - MLOps
-  - Orchestration
-  - Pipelines
-  - Workflows
+- Data Science
+- Kubernetes
+- Machine-Learning
+- MLOps
+- Orchestration
+- Pipelines
+- Workflows
 tags_raw:
-  - Data Science
-  - Kubernetes
-  - Machine Learning
-  - MLOps
-  - Orchestration
-  - Pipelines
-  - Workflows
+- Data Science
+- Kubernetes
+- Machine Learning
+- MLOps
+- Orchestration
+- Pipelines
+- Workflows
 url: https://raw.githubusercontent.com/api-evangelist/kubeflow-pipelines/refs/heads/main/apis.yml
 created: '2024-01-01'
-modified: '2026-04-28'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: kubeflow-pipelines:python-sdk
   name: Kubeflow Pipelines Python SDK
-  description: >-
-    Python SDK for building, compiling, and submitting ML pipelines. Provides decorators and utilities
-    to define pipeline components and workflows using Python.
+  description: Python SDK for building, compiling, and submitting ML pipelines. Provides decorators and
+    utilities to define pipeline components and workflows using Python.
   humanURL: https://kubeflow-pipelines.readthedocs.io/
   baseURL: https://pypi.org/project/kfp/
   tags:
@@ -77,8 +73,8 @@ apis:
     url: https://github.com/kubeflow/pipelines/tree/master/samples
 - aid: kubeflow-pipelines:go-client
   name: Kubeflow Pipelines Go Client
-  description: >-
-    Go client library for interacting with the Kubeflow Pipelines API programmatically from Go applications.
+  description: Go client library for interacting with the Kubeflow Pipelines API programmatically from
+    Go applications.
   humanURL: https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client
   tags:
   - Client Library
@@ -91,9 +87,8 @@ apis:
     url: https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client
 - aid: kubeflow-pipelines:metadata-api
   name: Kubeflow Pipelines Metadata API
-  description: >-
-    API for tracking and managing metadata about ML artifacts, executions, and lineage information throughout
-    the ML pipeline lifecycle, backed by ML Metadata (MLMD).
+  description: API for tracking and managing metadata about ML artifacts, executions, and lineage information
+    throughout the ML pipeline lifecycle, backed by ML Metadata (MLMD).
   humanURL: https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/
   tags:
   - Artifacts
@@ -108,8 +103,7 @@ apis:
 - aid: kubeflow-pipelines:kubeflow-pipelines-experiments-api
   name: Kubeflow Pipelines Experiments API
   description: Group runs and recurring jobs into experiments
-  humanURL: >-
-    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
   baseURL: https://your-kubeflow-host/pipeline
   tags:
   - Experiments
@@ -117,13 +111,11 @@ apis:
   - type: OpenAPI
     url: openapi/kubeflow-pipelines-experiments-api-openapi.yml
   - type: Documentation
-    url: >-
-      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+    url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
 - aid: kubeflow-pipelines:kubeflow-pipelines-health-api
   name: Kubeflow Pipelines Health API
   description: Health and auth checks
-  humanURL: >-
-    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
   baseURL: https://your-kubeflow-host/pipeline
   tags:
   - Health
@@ -131,13 +123,11 @@ apis:
   - type: OpenAPI
     url: openapi/kubeflow-pipelines-health-api-openapi.yml
   - type: Documentation
-    url: >-
-      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+    url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
 - aid: kubeflow-pipelines:kubeflow-pipelines-pipelines-api
-  name: Kubeflow Pipelines Pipelines API
+  name: Kubeflow Pipelines API
   description: Manage pipeline definitions
-  humanURL: >-
-    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
   baseURL: https://your-kubeflow-host/pipeline
   tags:
   - Pipelines
@@ -145,13 +135,11 @@ apis:
   - type: OpenAPI
     url: openapi/kubeflow-pipelines-pipelines-api-openapi.yml
   - type: Documentation
-    url: >-
-      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+    url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
 - aid: kubeflow-pipelines:kubeflow-pipelines-pipelineversions-api
   name: Kubeflow Pipelines PipelineVersions API
   description: Manage versions of pipelines
-  humanURL: >-
-    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
   baseURL: https://your-kubeflow-host/pipeline
   tags:
   - PipelineVersions
@@ -159,13 +147,11 @@ apis:
   - type: OpenAPI
     url: openapi/kubeflow-pipelines-pipelineversions-api-openapi.yml
   - type: Documentation
-    url: >-
-      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+    url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
 - aid: kubeflow-pipelines:kubeflow-pipelines-runs-api
   name: Kubeflow Pipelines Runs API
   description: Pipeline runs
-  humanURL: >-
-    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
   baseURL: https://your-kubeflow-host/pipeline
   tags:
   - Runs
@@ -173,46 +159,45 @@ apis:
   - type: OpenAPI
     url: openapi/kubeflow-pipelines-runs-api-openapi.yml
   - type: Documentation
-    url: >-
-      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+    url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
 common:
-  - type: IssueTracker
-    url: https://github.com/kubeflow/pipelines/issues
-  - type: SecurityPolicy
-    url: https://github.com/kubeflow/pipelines/blob/master/SECURITY.md
-  - type: CodeOfConduct
-    url: https://github.com/kubeflow/pipelines/blob/master/CODE_OF_CONDUCT.md
-  - type: ContributionGuide
-    url: https://github.com/kubeflow/pipelines/blob/master/CONTRIBUTING.md
-  - type: License
-    name: Apache-2.0
-    url: https://github.com/kubeflow/pipelines/blob/master/LICENSE
-  - type: AgenticAccess
-    url: agentic-access/kubeflow-pipelines-agentic-access.yml
-  - type: DomainSecurity
-    url: security/kubeflow-pipelines-domain-security.yml
-  - type: Authentication
-    url: authentication/kubeflow-pipelines-authentication.yml
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/kubeflow
-  - type: Website
-    url: https://www.kubeflow.org/docs/components/pipelines/
-  - type: Documentation
-    url: https://www.kubeflow.org/docs/components/pipelines/
-  - type: GettingStarted
-    url: https://www.kubeflow.org/docs/components/pipelines/getting-started/
-  - type: GitHubOrg
-    url: https://github.com/kubeflow
-  - type: GitHubRepository
-    url: https://github.com/kubeflow/pipelines
-  - type: Blog
-    url: https://blog.kubeflow.org/
-  - type: Community
-    url: https://www.kubeflow.org/docs/about/community/
-  - type: ChangeLog
-    url: https://github.com/kubeflow/pipelines/releases
+- type: IssueTracker
+  url: https://github.com/kubeflow/pipelines/issues
+- type: SecurityPolicy
+  url: https://github.com/kubeflow/pipelines/blob/master/SECURITY.md
+- type: CodeOfConduct
+  url: https://github.com/kubeflow/pipelines/blob/master/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/kubeflow/pipelines/blob/master/CONTRIBUTING.md
+- type: License
+  name: Apache-2.0
+  url: https://github.com/kubeflow/pipelines/blob/master/LICENSE
+- type: AgenticAccess
+  url: agentic-access/kubeflow-pipelines-agentic-access.yml
+- type: DomainSecurity
+  url: security/kubeflow-pipelines-domain-security.yml
+- type: Authentication
+  url: authentication/kubeflow-pipelines-authentication.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/kubeflow
+- type: Website
+  url: https://www.kubeflow.org/docs/components/pipelines/
+- type: Documentation
+  url: https://www.kubeflow.org/docs/components/pipelines/
+- type: GettingStarted
+  url: https://www.kubeflow.org/docs/components/pipelines/getting-started/
+- type: GitHubOrg
+  url: https://github.com/kubeflow
+- type: GitHubRepository
+  url: https://github.com/kubeflow/pipelines
+- type: Blog
+  url: https://blog.kubeflow.org/
+- type: Community
+  url: https://www.kubeflow.org/docs/about/community/
+- type: ChangeLog
+  url: https://github.com/kubeflow/pipelines/releases
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 x-parent: kubeflow
 x-relationship: product
