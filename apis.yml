@@ -55,8 +55,9 @@ specificationVersion: '0.23'
 apis:
 - aid: kubeflow-pipelines:python-sdk
   name: Kubeflow Pipelines Python SDK
-  description: Python SDK for building, compiling, and submitting ML pipelines. Provides decorators and
-    utilities to define pipeline components and workflows using Python.
+  description: >-
+    Python SDK for building, compiling, and submitting ML pipelines. Provides decorators and utilities
+    to define pipeline components and workflows using Python.
   humanURL: https://kubeflow-pipelines.readthedocs.io/
   baseURL: https://pypi.org/project/kfp/
   tags:
@@ -73,8 +74,8 @@ apis:
     url: https://github.com/kubeflow/pipelines/tree/master/samples
 - aid: kubeflow-pipelines:go-client
   name: Kubeflow Pipelines Go Client
-  description: Go client library for interacting with the Kubeflow Pipelines API programmatically from
-    Go applications.
+  description: >-
+    Go client library for interacting with the Kubeflow Pipelines API programmatically from Go applications.
   humanURL: https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client
   tags:
   - Client Library
@@ -87,8 +88,9 @@ apis:
     url: https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client
 - aid: kubeflow-pipelines:metadata-api
   name: Kubeflow Pipelines Metadata API
-  description: API for tracking and managing metadata about ML artifacts, executions, and lineage information
-    throughout the ML pipeline lifecycle, backed by ML Metadata (MLMD).
+  description: >-
+    API for tracking and managing metadata about ML artifacts, executions, and lineage information throughout
+    the ML pipeline lifecycle, backed by ML Metadata (MLMD).
   humanURL: https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/
   tags:
   - Artifacts
@@ -103,7 +105,8 @@ apis:
 - aid: kubeflow-pipelines:kubeflow-pipelines-experiments-api
   name: Kubeflow Pipelines Experiments API
   description: Group runs and recurring jobs into experiments
-  humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  humanURL: >-
+    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
   baseURL: https://your-kubeflow-host/pipeline
   tags:
   - Experiments
@@ -111,11 +114,13 @@ apis:
   - type: OpenAPI
     url: openapi/kubeflow-pipelines-experiments-api-openapi.yml
   - type: Documentation
-    url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+    url: >-
+      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
 - aid: kubeflow-pipelines:kubeflow-pipelines-health-api
   name: Kubeflow Pipelines Health API
   description: Health and auth checks
-  humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  humanURL: >-
+    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
   baseURL: https://your-kubeflow-host/pipeline
   tags:
   - Health
@@ -123,11 +128,13 @@ apis:
   - type: OpenAPI
     url: openapi/kubeflow-pipelines-health-api-openapi.yml
   - type: Documentation
-    url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+    url: >-
+      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
 - aid: kubeflow-pipelines:kubeflow-pipelines-pipelines-api
   name: Kubeflow Pipelines API
   description: Manage pipeline definitions
-  humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  humanURL: >-
+    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
   baseURL: https://your-kubeflow-host/pipeline
   tags:
   - Pipelines
@@ -135,23 +142,13 @@ apis:
   - type: OpenAPI
     url: openapi/kubeflow-pipelines-pipelines-api-openapi.yml
   - type: Documentation
-    url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
-- aid: kubeflow-pipelines:kubeflow-pipelines-pipelineversions-api
-  name: Kubeflow Pipelines PipelineVersions API
-  description: Manage versions of pipelines
-  humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
-  baseURL: https://your-kubeflow-host/pipeline
-  tags:
-  - PipelineVersions
-  properties:
-  - type: OpenAPI
-    url: openapi/kubeflow-pipelines-pipelineversions-api-openapi.yml
-  - type: Documentation
-    url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+    url: >-
+      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
 - aid: kubeflow-pipelines:kubeflow-pipelines-runs-api
   name: Kubeflow Pipelines Runs API
   description: Pipeline runs
-  humanURL: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+  humanURL: >-
+    https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
   baseURL: https://your-kubeflow-host/pipeline
   tags:
   - Runs
@@ -159,7 +156,21 @@ apis:
   - type: OpenAPI
     url: openapi/kubeflow-pipelines-runs-api-openapi.yml
   - type: Documentation
-    url: https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+    url: >-
+      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
+- aid: kubeflow-pipelines:kubeflow-pipelines-pipeline-versions-api
+  name: Kubeflow Pipelines Pipeline Versions API
+  description: Manage versions of pipelines
+  humanURL: https://kubeflow-pipelines.readthedocs.io/
+  baseURL: https://pypi.org/project/kfp/
+  tags:
+  - Pipeline Versions
+  properties:
+  - type: OpenAPI
+    url: openapi/kubeflow-pipelines-pipeline-versions-api-openapi.yml
+  - type: Documentation
+    url: >-
+      https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
 common:
 - type: IssueTracker
   url: https://github.com/kubeflow/pipelines/issues
