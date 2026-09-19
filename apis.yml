@@ -164,6 +164,8 @@ apis:
   humanURL: https://kubeflow-pipelines.readthedocs.io/
   baseURL: https://pypi.org/project/kfp/
   tags:
+  - PipelineVersions
+  tags_raw:
   - Pipeline Versions
   properties:
   - type: OpenAPI
