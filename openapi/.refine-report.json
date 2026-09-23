@@ -1,29 +1,31 @@
 {
   "provider": "kubeflow-pipelines",
   "sources": [
-    "kubeflow-pipelines-experiments-api-openapi.yml",
-    "kubeflow-pipelines-health-api-openapi.yml",
-    "kubeflow-pipelines-pipelines-api-openapi.yml",
-    "kubeflow-pipelines-pipelineversions-api-openapi.yml",
-    "kubeflow-pipelines-runs-api-openapi.yml"
+    "_original/kubeflow-pipelines-openapi.yml"
   ],
   "outputs": [
     "kubeflow-pipelines-experiments-api-openapi.yml",
     "kubeflow-pipelines-health-api-openapi.yml",
-    "kubeflow-pipelines-pipelines-api-openapi.yml",
     "kubeflow-pipelines-pipelineversions-api-openapi.yml",
+    "kubeflow-pipelines-pipelines-api-openapi.yml",
     "kubeflow-pipelines-runs-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
-    "kubeflow-pipelines-experiments-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "kubeflow-pipelines-health-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "kubeflow-pipelines-pipelines-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "kubeflow-pipelines-pipelineversions-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "kubeflow-pipelines-runs-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "kubeflow-pipelines-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "superseded outputs removed: kubeflow-pipelines-pipeline-versions-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 8 total)"
   ],
-  "skipped": []
+  "skipped": [
+    "kubeflow-pipelines-experiments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "kubeflow-pipelines-health-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "kubeflow-pipelines-pipeline-versions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "kubeflow-pipelines-pipelines-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "kubeflow-pipelines-runs-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
