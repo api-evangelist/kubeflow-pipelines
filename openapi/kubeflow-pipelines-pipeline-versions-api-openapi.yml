@@ -75,17 +75,6 @@ paths:
                 $ref: '#/components/schemas/PipelineVersion'
 components:
   schemas:
-    ListPipelineVersionsResponse:
-      type: object
-      properties:
-        pipeline_versions:
-          type: array
-          items:
-            $ref: '#/components/schemas/PipelineVersion'
-        total_size:
-          type: integer
-        next_page_token:
-          type: string
     PipelineVersion:
       type: object
       properties:
@@ -102,6 +91,17 @@ components:
           type: string
           format: date-time
           readOnly: true
+    ListPipelineVersionsResponse:
+      type: object
+      properties:
+        pipeline_versions:
+          type: array
+          items:
+            $ref: '#/components/schemas/PipelineVersion'
+        total_size:
+          type: integer
+        next_page_token:
+          type: string
   securitySchemes:
     bearerAuth:
       type: http

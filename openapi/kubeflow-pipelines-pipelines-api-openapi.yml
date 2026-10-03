@@ -139,6 +139,17 @@ paths:
                 $ref: '#/components/schemas/Pipeline'
 components:
   schemas:
+    ListPipelinesResponse:
+      type: object
+      properties:
+        pipelines:
+          type: array
+          items:
+            $ref: '#/components/schemas/Pipeline'
+        total_size:
+          type: integer
+        next_page_token:
+          type: string
     Pipeline:
       type: object
       properties:
@@ -154,17 +165,6 @@ components:
           format: date-time
           readOnly: true
         namespace:
-          type: string
-    ListPipelinesResponse:
-      type: object
-      properties:
-        pipelines:
-          type: array
-          items:
-            $ref: '#/components/schemas/Pipeline'
-        total_size:
-          type: integer
-        next_page_token:
           type: string
   securitySchemes:
     bearerAuth:
