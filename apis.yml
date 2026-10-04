@@ -165,6 +165,8 @@ apis:
   humanURL: https://kubeflow-pipelines.readthedocs.io/
   baseURL: https://pypi.org/project/kfp/
   tags:
+  - PipelineVersions
+  tags_raw:
   - Pipeline Versions
   properties:
   - type: OpenAPI
@@ -173,6 +175,9 @@ apis:
     url: >-
       https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/
 common:
+- type: CapabilityMap
+  url: capabilities/kubeflow-pipelines-capability-edges.yml
+  name: Kubeflow Pipelines Business Capability Map
 - type: IssueTracker
   url: https://github.com/kubeflow/pipelines/issues
 - type: SecurityPolicy
