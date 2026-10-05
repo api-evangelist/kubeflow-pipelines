@@ -1,0 +1,55 @@
+slug: kubeflow-pipelines
+provider: Kubeflow Pipelines
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 4
+edges:
+- tag: Experiments
+  spec_file: kubeflow-pipelines-experiments-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.8
+  evidence: POST /apis/v2beta1/experiments createExperiment; 'platform for building and deploying portable,
+    scalable machine learning workflows'
+  reason: Experiments here are ML pipeline run groupings in Kubeflow — AI/ML model lifecycle and MLOps,
+    not product A/B testing (BC-4280).
+- tag: Pipelines
+  spec_file: kubeflow-pipelines-pipelines-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.8
+  evidence: 'POST /apis/v2beta1/pipelines  createPipeline ... POST /apis/v2beta1/pipelines/upload  uploadPipeline  Upload
+    a pipeline package — vendor: ''platform for building and deploying portable, scalable machine learning
+    workflows'''
+  reason: CRUD over ML pipeline definitions on a machine-learning orchestration platform — MLOps / AI
+    model lifecycle management.
+- tag: Pipeline Versions
+  spec_file: kubeflow-pipelines-pipeline-versions-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.75
+  evidence: POST /apis/v2beta1/pipelines/{pipeline_id}/versions  createPipelineVersion  Create a pipeline
+    version; schema PipelineVersion
+  reason: Versioning of ML workflow pipelines on an ML platform is part of the AI/ML model lifecycle and
+    MLOps tooling; the narrower L2 fits, though it is versioning of workflow artefacts specifically.
+- tag: Runs
+  spec_file: kubeflow-pipelines-runs-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: GET /apis/v2beta1/runs  listRuns  List pipeline runs
+  reason: Execution records of ML pipeline runs on an ML workflow platform; belongs to AI/ML lifecycle
+    (MLOps) management, though the single read operation is thin evidence.
