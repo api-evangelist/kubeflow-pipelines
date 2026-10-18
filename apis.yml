@@ -95,6 +95,11 @@ apis:
   humanURL: https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/
   tags:
   - Artifacts
+  - Data Lineage
+  - Metadata
+  - ML Metadata
+  tags_raw:
+  - Artifacts
   - Lineage
   - Metadata
   - ML Metadata
@@ -165,6 +170,8 @@ apis:
   humanURL: https://kubeflow-pipelines.readthedocs.io/
   baseURL: https://pypi.org/project/kfp/
   tags:
+  - PipelineVersions
+  tags_raw:
   - Pipeline Versions
   properties:
   - type: OpenAPI
