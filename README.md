@@ -1,4 +1,4 @@
-# Kubeflow Pipelines (kubeflow-pipelines)
+# Kubeflow Pipelines
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,124 +66,128 @@
 
 Kubeflow Pipelines is a platform for building and deploying portable, scalable machine learning workflows based on Docker containers. It provides a way to orchestrate complex ML workflows with dependencies, enabling data scientists and ML engineers to deploy production-ready ML systems on Kubernetes.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/kubeflow-pipelines/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/kubeflow-pipelines/refs/heads/main/apis.yml)
+**Areas:** Data Science · Kubernetes · Machine Learning · MLOps · Orchestration · Pipelines · Workflows
 
-## Scope
+## Kubeflow Pipelines on APIs.io
 
-- **Type:** Index
+Everything profiled for Kubeflow Pipelines is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/kubeflow-pipelines/](https://apis.io/providers/kubeflow-pipelines/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (8)
 
-- Data Science
-- Kubernetes
-- Machine Learning
-- MLOps
-- Orchestration
-- Pipelines
-- Workflows
+- [Kubeflow Pipelines Python SDK](https://apis.io/apis/kubeflow-pipelines/python-sdk/) — Python SDK for building, compiling, and submitting ML pipelines. Provides decorators and utilities to define pipeline components and workflows using Python.
+- [Kubeflow Pipelines Go Client](https://apis.io/apis/kubeflow-pipelines/go-client/) — Go client library for interacting with the Kubeflow Pipelines API programmatically from Go applications.
+- [Kubeflow Pipelines Metadata API](https://apis.io/apis/kubeflow-pipelines/metadata-api/) — API for tracking and managing metadata about ML artifacts, executions, and lineage information throughout the ML pipeline lifecycle, backed by ML Metadata…
+- [Kubeflow Pipelines Experiments API](https://apis.io/apis/kubeflow-pipelines/kubeflow-pipelines-experiments-api/) — Group runs and recurring jobs into experiments
+- [Kubeflow Pipelines Health API](https://apis.io/apis/kubeflow-pipelines/kubeflow-pipelines-health-api/) — Health and auth checks
+- [Kubeflow Pipelines API](https://apis.io/apis/kubeflow-pipelines/kubeflow-pipelines-pipelines-api/) — Manage pipeline definitions
+- [Kubeflow Pipelines Runs API](https://apis.io/apis/kubeflow-pipelines/kubeflow-pipelines-runs-api/) — Pipeline runs
+- [Kubeflow Pipelines Pipeline Versions API](https://apis.io/apis/kubeflow-pipelines/kubeflow-pipelines-pipeline-versions-api/) — Manage versions of pipelines
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-01
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Kubeflow Pipelines REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API for managing ML pipelines, experiments, runs, and artifacts. Provides programmatic access to create, execute, and monitor ML workflows on a Kubeflow Pipelines deployment.
+- [Kubeflow Pipelines Agentic Access](https://apis.io/agentic-access/kubeflow-pipelines/kubeflow-pipelines-agentic-access/)
 
-- **Human URL:** [https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/](https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/)
-- **Base URL:** `https://your-kubeflow-host/pipeline`
+#### Collections (6)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Experiments
-- Pipelines
-- REST API
-- Runs
+- [Kubeflow Pipelines REST API](https://apis.io/collections/kubeflow-pipelines/open-kubeflow-pipelines/)
+- [Kubeflow Pipelines REST Experiments API](https://apis.io/collections/kubeflow-pipelines/open-kubeflow-pipelines-experiments-api/)
+- [Kubeflow Pipelines REST Experiments Health API](https://apis.io/collections/kubeflow-pipelines/open-kubeflow-pipelines-health-api/)
+- [Kubeflow REST Experiments Pipelines API](https://apis.io/collections/kubeflow-pipelines/open-kubeflow-pipelines-pipelines-api/)
+- [Kubeflow Pipelines REST Experiments PipelineVersions API](https://apis.io/collections/kubeflow-pipelines/open-kubeflow-pipelines-pipelineversions-api/)
+- [Kubeflow Pipelines REST Experiments Runs API](https://apis.io/collections/kubeflow-pipelines/open-kubeflow-pipelines-runs-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://www.kubeflow.org/docs/components/pipelines/reference/api/kubeflow-pipeline-api-spec/)
-- [OpenAPI](https://raw.githubusercontent.com/kubeflow/pipelines/master/backend/api/v2beta1/swagger/pipeline.swagger.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/kubeflow-pipelines.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/kubeflow-pipelines.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Kubeflow Pipelines Python SDK
+- [Kubeflow Pipelines Authentication](https://apis.io/security/kubeflow-pipelines/kubeflow-pipelines-authentication/)
+- [Kubeflow Pipelines Domain Security](https://apis.io/security/kubeflow-pipelines/kubeflow-pipelines-domain-security/)
 
-Python SDK for building, compiling, and submitting ML pipelines. Provides decorators and utilities to define pipeline components and workflows using Python.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://kubeflow-pipelines.readthedocs.io/](https://kubeflow-pipelines.readthedocs.io/)
-- **Base URL:** `https://pypi.org/project/kfp/`
+Published plans, tiers and prices.
 
-#### Tags
+- [Kubeflow Pipelines Plans Pricing](https://apis.io/plans/kubeflow-pipelines/kubeflow-pipelines-plans-pricing/)
 
-- Client Library
-- DSL
-- Python
-- SDK
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://kubeflow-pipelines.readthedocs.io/)
-- [GitHub Repository](https://github.com/kubeflow/pipelines/tree/master/sdk/python)
-- [Examples](https://github.com/kubeflow/pipelines/tree/master/samples)
-- [Postman Collection](collections/kubeflow-pipelines.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/kubeflow-pipelines.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Kubeflow Pipelines Rate Limits](https://apis.io/rate-limits/kubeflow-pipelines/kubeflow-pipelines-rate-limits/)
 
-### Kubeflow Pipelines Go Client
+#### FinOps (1)
 
-Go client library for interacting with the Kubeflow Pipelines API programmatically from Go applications.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client](https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client)
+- [Kubeflow Pipelines Finops](https://apis.io/finops/kubeflow-pipelines/kubeflow-pipelines-finops/)
 
-#### Tags
+## Where to find this API
 
-- Client Library
-- Go
-- SDK
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Properties
-
-- [Documentation](https://pkg.go.dev/github.com/kubeflow/pipelines/backend/api/go_client)
-- [GitHub Repository](https://github.com/kubeflow/pipelines/tree/master/backend/api/go_client)
-- [Postman Collection](collections/kubeflow-pipelines.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/kubeflow-pipelines.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Kubeflow Pipelines Metadata API
-
-API for tracking and managing metadata about ML artifacts, executions, and lineage information throughout the ML pipeline lifecycle, backed by ML Metadata (MLMD).
-
-- **Human URL:** [https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/](https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/)
-
-#### Tags
-
-- Artifacts
-- Lineage
-- Metadata
-- ML Metadata
-
-#### Properties
-
-- [Documentation](https://www.kubeflow.org/docs/components/pipelines/concepts/metadata/)
-- [GitHub Repository](https://github.com/google/ml-metadata)
-- [Postman Collection](collections/kubeflow-pipelines.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/kubeflow-pipelines.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/kubeflow)
 - [Website](https://www.kubeflow.org/docs/components/pipelines/)
 - [Documentation](https://www.kubeflow.org/docs/components/pipelines/)
-- [Getting Started](https://www.kubeflow.org/docs/components/pipelines/getting-started/)
-- [Git Hub Org](https://github.com/kubeflow)
-- [GitHub Repository](https://github.com/kubeflow/pipelines)
-- [Blog](https://blog.kubeflow.org/)
-- [Community](https://www.kubeflow.org/docs/about/community/)
+- [Getting started](https://www.kubeflow.org/docs/components/pipelines/getting-started/)
 - [Changelog](https://github.com/kubeflow/pipelines/releases)
+- [Blog](https://blog.kubeflow.org/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 37.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 45.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 39.5 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 7.9 |
+
+**Agent readiness 19.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/kubeflow-pipelines/](https://apis.io/providers/kubeflow-pipelines/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Kubeflow Pipelines: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/kubeflow-pipelines/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
